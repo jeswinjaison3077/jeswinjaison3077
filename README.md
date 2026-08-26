@@ -1,4 +1,4 @@
-# Hi there, I'm Jeswin Jaison Vadakkel👋
+# Hi there, I'm Jeswin Jaison Vadakkel 👋
 
 CSE undergraduate at **College of Engineering, Trivandrum**, building structured technical depth through **NxtWave CCBP 4.0**. Driven by curiosity — strong interest in DSA, programming, and data analytics — paired with a creative streak for web and app development. I like taking the lead on team efforts, especially ones that create real value, and I actively look for problems worth solving.
 
@@ -8,7 +8,7 @@ CSE undergraduate at **College of Engineering, Trivandrum**, building structured
 
 <p align="left">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,tailwind,python,c,cpp,supabase,firebase,git,github,vercel,figma" />
+    <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,tailwind,python,c,cpp,supabase,firebase,git,github,vercel,figma" alt="Tech Stack" />
   </a>
 </p>
 
@@ -42,18 +42,29 @@ CSE undergraduate at **College of Engineering, Trivandrum**, building structured
 
 ### 📊 GitHub Activity
 
-![Jeswin's GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=jeswinjaison3077&theme=react-dark)
+<p align="center">
+  <img src="https://ghchart.rshah.org/409ba5/jeswinjaison3077" alt="Jeswin's GitHub Contributions Chart" style="width:100%;" />
+</p>
 
 <br/>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=jeswinjaison3077&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jeswinjaison3077&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=jeswinjaison3077&theme=tokyonight&hide_border=true" alt="GitHub Streak Stats" />
 </p>
 
 ### 📫 Connect with me
 
-<!-- www.linkedin.com/in/jeswinjaison-307q7 / jeswinjaison5@gmail.com -->
+<p align="left">
+  <a href="https://www.linkedin.com/in/jeswinjaison-307q7" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="mailto:jeswinjaison5@gmail.com">
+    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+</p>
+
+- 💼 **LinkedIn**: [linkedin.com/in/jeswinjaison-307q7](https://www.linkedin.com/in/jeswinjaison-307q7)
+- 📧 **Email**: [jeswinjaison5@gmail.com](mailto:jeswinjaison5@gmail.com)
 
 ---
 ⭐️ Always learning, always building.
