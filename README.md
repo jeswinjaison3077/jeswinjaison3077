@@ -16,6 +16,7 @@ CSE undergraduate at **College of Engineering, Trivandrum**, building structured
 
 ### 🚀 What I'm working on
 
+- 🍽️ **MenuSync AI** — A full-stack SaaS-style restaurant menu manager (HTML, CSS, JS, Supabase, Vercel) with CRUD, multi-platform preview, auth, and real-time sync.
 - 🛒 **Campus Deals** — A student marketplace for buying/selling used products within college communities, with a privacy-first, admin-mediated listing workflow.
 - 🏫 **Club Platform CET** — Contributing to a platform showcasing all clubs at CET (events, execom, members, contact info).
 - 💊 **Nayana** — Building an e-commerce platform for a doctor to sell skincare products, with potential to grow into a startup.
@@ -23,8 +24,8 @@ CSE undergraduate at **College of Engineering, Trivandrum**, building structured
 
 ### 🛠️ Featured Projects
 
+- 🤖 **[Ask CET](#)** — An AI-powered campus Q&A platform for College of Engineering, Trivandrum, delivering instant, context-aware answers to student and academic queries.
 - 🎧 **[Aether Headphones](#)** — A premium, interactive product showcase UI built with Next.js 16, React 19, Tailwind CSS v4, and Framer Motion, with Firebase authentication.
-- 🍽️ **[MenuSync AI](#)** — A full-stack SaaS-style restaurant menu manager (HTML, CSS, JS, Supabase, Vercel) with CRUD, multi-platform preview, auth, and real-time sync.
 
 ### 🌱 Currently Learning
 
