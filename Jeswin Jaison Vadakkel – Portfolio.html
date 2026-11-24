@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jeswin Jaison Vadakkel – Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#12151a;--bg2:#1b2027;--ink:#ebe5d6;--mute:#939ba5;--card:#181d24;--line:#2b333d;--acc:#6fb7a4;--gold:#d6a84e;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="light"]{--bg:#f1ecdf;--bg2:#e5dfcf;--ink:#1c1a15;--mute:#5f5a4d;--card:#f9f6ec;--line:#d6ceb8;--acc:#2b7765;--gold:#9a6510;color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:"Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.02em;line-height:1.1;margin:0}
+a{color:inherit}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+#bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:0;background:linear-gradient(90deg,var(--acc),var(--gold));z-index:70}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px clamp(16px,5vw,56px);backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 80%,transparent)}
+nav .links{display:flex;gap:22px;font-size:15px;overflow-x:auto}
+nav .links a{text-decoration:none;color:var(--mute);white-space:nowrap;transition:color .2s}
+nav .links a:hover,nav .links a.on{color:var(--ink)}
+button{font:inherit;color:inherit;cursor:pointer}
+#theme{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 14px;margin-left:14px}
+section{position:relative;padding:110px clamp(18px,6vw,80px);max-width:1180px;margin:auto}
+h2{font-size:clamp(32px,5vw,54px);margin-bottom:12px}
+.lead{color:var(--mute);max-width:60ch;margin:0 0 40px}
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;max-width:none;overflow:hidden}
+#cv{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+#hero>div{position:relative;z-index:1;max-width:1180px;margin:auto;width:100%;pointer-events:none}
+#hero a,#hero button{pointer-events:auto}
+h1{font-size:clamp(44px,10vw,118px);font-weight:700}
+h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+h1 .w span{display:inline-block;transform:translateY(110%);animation:up .9s cubic-bezier(.2,.9,.2,1) forwards}
+@keyframes up{to{transform:none}}
+.role{font-size:clamp(20px,3vw,30px);margin:22px 0 8px;font-family:"Bricolage Grotesque",sans-serif;min-height:1.4em}
+.role b{color:var(--acc)}
+.caret{display:inline-block;width:2px;height:1em;background:var(--gold);margin-left:3px;vertical-align:-.12em;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:13px 26px;border-radius:99px;border:1px solid var(--line);background:var(--card);text-decoration:none;font-weight:500;transition:transform .2s,box-shadow .2s;will-change:transform}
+.btn.p{background:var(--acc);color:#fff;border-color:var(--acc)}
+.btn:hover{box-shadow:0 10px 30px color-mix(in srgb,var(--acc) 35%,transparent)}
+.hint{margin-top:44px;color:var(--mute);font-size:14px}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:start}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.stat b{font:700 clamp(34px,5vw,52px)/1 "Bricolage Grotesque",sans-serif;color:var(--acc);display:block}
+.stat span{color:var(--mute);font-size:14px}
+.tl{position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl i{position:absolute;left:8px;top:6px;width:2px;height:calc(var(--p,0)*100%);background:linear-gradient(var(--acc),var(--gold))}
+.job{position:relative;margin-bottom:34px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 24px;cursor:pointer;transition:border-color .2s}
+.job::before{content:"";position:absolute;left:-33px;top:28px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--acc);transition:background .3s,transform .3s}
+.job.in::before{background:var(--acc);transform:scale(1.15)}
+.job:hover{border-color:var(--acc)}
+.job h3{font-size:22px}.job .m{color:var(--mute);font-size:14px;margin:4px 0}
+.job ul{margin:10px 0 0;padding-left:20px;color:var(--mute);max-height:0;overflow:hidden;opacity:0;transition:max-height .5s,opacity .4s}
+.job.open ul{max-height:260px;opacity:1}
+.job .t{float:right;color:var(--gold);font-size:22px;transition:transform .3s}.job.open .t{transform:rotate(45deg)}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:7px 18px;font-size:15px;transition:all .2s}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;transition:transform .15s,opacity .4s,border-color .2s;transform-style:preserve-3d;overflow:hidden}
+.card::after{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--acc) 22%,transparent),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover::after{opacity:1}.card:hover{border-color:var(--acc)}
+.card.hide{display:none}
+.card h3{font-size:24px;margin-bottom:8px}.card p{color:var(--mute);margin:0 0 16px;font-size:15.5px}
+.tags{display:flex;gap:8px;flex-wrap:wrap}.tags span{font-size:13px;padding:3px 11px;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.card .st{position:absolute;top:22px;right:22px;font-size:13px;color:var(--gold)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.sk{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.sk h3{font-size:20px;margin-bottom:14px}
+.bars div{margin-bottom:12px;font-size:15px}
+.bars em{display:block;height:6px;border-radius:9px;background:var(--bg2);margin-top:5px;overflow:hidden;font-style:normal}
+.bars em::after{content:"";display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc),var(--gold));border-radius:9px;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.in .bars em::after{width:var(--w)}
+.mq{overflow:hidden;margin:46px 0 0;border-block:1px solid var(--line);padding:16px 0;mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.mq div{display:flex;gap:44px;width:max-content;animation:mq 30s linear infinite;font:500 22px "Bricolage Grotesque",sans-serif;color:var(--mute)}
+.mq:hover div{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}
+.box h3{font-size:21px;margin-bottom:10px}.box ul{margin:0;padding-left:20px;color:var(--mute)}.box li{margin-bottom:6px}
+.term{background:#050a16;color:#cfe0ff;border-radius:18px;border:1px solid var(--line);font:15px/1.6 ui-monospace,Menlo,Consolas,monospace;overflow:hidden}
+.term .hd{padding:10px 16px;background:#0d1630;color:#97a6c7;font-size:13px}
+#out{padding:16px;height:260px;overflow:auto;white-space:pre-wrap}
+.pr{display:flex;padding:0 16px 16px;gap:8px}.pr span{color:#f2b84b}
+#in{flex:1;background:none;border:0;outline:0;color:inherit;font:inherit}
+.cts{display:flex;gap:14px;flex-wrap:wrap}
+footer{text-align:center;color:var(--mute);padding:40px 20px 60px;font-size:14px}
+#dot,#ring{position:fixed;left:0;top:0;pointer-events:none;z-index:99;border-radius:50%;display:none}
+#dot{width:7px;height:7px;background:var(--gold)}#ring{width:36px;height:36px;border:1.5px solid var(--acc);transition:width .2s,height .2s,background .2s}
+#ring.big{width:60px;height:60px;background:color-mix(in srgb,var(--acc) 15%,transparent)}
+@media (pointer:fine){#dot,#ring{display:block}body,a,button{cursor:none}}
+@media (max-width:760px){.about{grid-template-columns:1fr}nav .links{display:none}section{padding:80px 18px}}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+/* theme refinements */
+#bar{background:var(--gold)}
+nav{backdrop-filter:none;background:var(--bg);border-bottom:1px solid var(--line)}
+.stat,.job,.card,.sk,.box{border-radius:10px}.stat{border-radius:4px}
+.card::after{display:none}.card:hover{border-color:var(--gold)}
+.btn{border-radius:8px}.btn:hover{box-shadow:none;border-color:var(--gold)}.btn.p{color:var(--bg)}
+.bars em::after{background:var(--acc)}.tl i{background:var(--gold)}
+.chip.on{background:var(--gold);color:#12151a;border-color:var(--gold)}
+.term{background:#0c0e11;color:#ddd6c4}.term .hd{background:#161a1f}.pr span{color:#d6a84e}
+#theme{width:42px;height:42px;padding:0;display:grid;place-items:center;border-radius:50%;transition:border-color .2s}
+#theme:hover{border-color:var(--gold)}#theme svg{transition:transform .6s}#theme:hover .sun{transform:rotate(90deg)}
+#theme .moon{display:none}:root[data-theme="light"] #theme .sun{display:none}:root[data-theme="light"] #theme .moon{display:block}
+.sun-fx{position:fixed;border-radius:50%;pointer-events:none;z-index:200;background:radial-gradient(circle closest-side,transparent 78%,rgba(255,190,90,.55) 93%,transparent 100%)}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+::view-transition-old(root){z-index:1}::view-transition-new(root){z-index:2}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}h1 .w span{transform:none}}
+</style></head><body>
+<div id="bar"></div><div id="dot"></div><div id="ring"></div>
+<nav><a href="#hero" class="disp" style="text-decoration:none;font-weight:700">Jeswin</a>
+<div style="display:flex;align-items:center"><div class="links"><a href="#about">About</a><a href="#exp">Experience</a><a href="#work">Projects</a><a href="#skills">Skills</a><a href="#edu">Education</a><a href="#lead">Leadership</a><a href="#term">Terminal</a><a href="#contact">Contact</a></div><button id="theme" aria-label="Switch to light theme" title="Sunrise"><svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10z"/></svg></button></div></nav>
+
+<section id="hero"><canvas id="cv"></canvas><div>
+<h1 id="name"></h1>
+<div class="role">I build <b id="ty"></b><span class="caret"></span></div>
+<p class="lead" style="margin:0">CSE undergrad at College of Engineering Trivandrum. Curious about DSA, data, and open source, and always starting something new with a team.</p>
+<div class="cta"><a class="btn p mag" href="#work">See my work</a><a class="btn mag" href="#contact">Get in touch</a></div>
+<div class="hint">Move your cursor over the map. Each node is a piece of what I do.</div></div></section>
+
+<section id="about"><div class="about"><div class="rv"><h2>Always looking for problems worth solving</h2>
+<p class="lead" style="margin-bottom:18px">I like taking the lead on team efforts that create real value. From coding challenges to open-source contributions on GitHub, I look for the next thing to build, and I’m preparing for Google Summer of Code.</p>
+<p class="lead" style="margin:0">Right now I’m an intern at Phorena, building a freelance e-commerce platform, and running Campus Deals, a student marketplace.</p></div>
+<div class="stats rv"><div class="stat"><b data-c="9.23" data-d="2">0</b><span>CGPA out of 10 at CET</span></div><div class="stat"><b data-c="7">0</b><span>projects built or in progress</span></div><div class="stat"><b data-c="3">0</b><span>languages spoken</span></div><div class="stat"><b data-c="30" data-s="h">0</b><span>hackathon I sub-coordinated (D Solve)</span></div></div></div></section>
+
+<section id="exp"><h2 class="rv">Experience</h2><p class="lead rv">Tap a card to see what I did.</p><div class="tl" id="tl"><i></i></div></section>
+
+<section id="work"><h2 class="rv">Projects</h2><p class="lead rv">Filter by type. Hover a card to tilt it.</p><div class="chips rv" id="chips"></div><div class="grid" id="grid"></div></section>
+
+<section id="skills"><h2 class="rv">Skills</h2><p class="lead rv">Strongest where I practice most.</p><div class="skills">
+<div class="sk rv"><h3>Languages</h3><div class="bars"><div>Java<em style="--w:80%"></em></div><div>Python<em style="--w:82%"></em></div><div>C<em style="--w:75%"></em></div><div>JavaScript<em style="--w:85%"></em></div></div></div>
+<div class="sk rv"><h3>Web and data</h3><div class="bars"><div>HTML and CSS<em style="--w:90%"></em></div><div>SQL (MySQL)<em style="--w:75%"></em></div><div>RAG and LLM apps<em style="--w:70%"></em></div><div>Data analysis<em style="--w:70%"></em></div></div></div>
+<div class="sk rv"><h3>How I work</h3><div class="tags" style="gap:10px"><span>Workload prioritization</span><span>Quality assurance</span><span>Decision-making</span><span>Team collaboration</span><span>Attention to detail</span><span>Multitasking</span><span>Data analysis</span></div></div></div>
+<div class="mq"><div id="mq"></div></div></section>
+
+<section id="edu"><h2 class="rv">Education and learning</h2><p class="lead rv">Structured depth, built alongside real projects.</p><div class="two">
+<div class="box rv"><h3>College of Engineering Trivandrum</h3><ul><li>B.Tech, Computer Science and Engineering</li><li>CGPA 9.23/10, expected 2029</li></ul></div>
+<div class="box rv"><h3>NxtWave Academy, CCBP 4.0</h3><ul><li>Certified in Responsive Websites, Intro to Databases, and MVP Project Completion</li><li>Learning DSA, with biweekly contests</li></ul></div>
+<div class="box rv"><h3>NPTEL, IIT Madras</h3><ul><li>Design and Analysis of Algorithms, Jul to Sep 2026</li><li>Elite certificate, 3 recommended credits</li></ul></div>
+<div class="box rv"><h3>Open source: Code Atlas</h3><ul><li>Built documentation generation from repository context</li><li>Worked on AI Q&amp;A grounded in real repository evidence</li></ul></div></div></section>
+
+<section id="lead"><h2 class="rv">Leadership</h2><p class="lead rv">Clubs, fests, and communities I help run.</p><div class="two">
+<div class="box rv"><h3>General Secretary, HCS</h3><ul><li>Lead a club for exchanging old coins, forex, and stamps</li><li>Helped launch an exchange platform and organize exhibitions and auctions</li></ul></div>
+<div class="box rv"><h3>Dhristi, college tech fest</h3><ul><li>General Management Coordinator</li><li>Sub-coordinator of D Solve, a 30-hour hackathon</li><li>Volunteered for Robo Soccer</li></ul></div>
+<div class="box rv"><h3>Dhwani, cultural fest</h3><ul><li>Helped deliver one of the best-attended club events outside the pro shows, on a lean budget</li></ul></div>
+<div class="box rv"><h3>More roles</h3><ul><li>Department Coordinator, Student Assist Cell, CET</li><li>Publicity Team, Beyond Tech</li></ul></div></div></section>
+
+<section id="term"><h2 class="rv">Ask me anything</h2><p class="lead rv">Type <b>help</b> in the terminal.</p>
+<div class="term rv"><div class="hd">jeswin@portfolio</div><div id="out"></div><div class="pr"><span>$</span><input id="in" autocomplete="off" spellcheck="false" aria-label="Terminal command"></div></div></section>
+
+<section id="contact"><h2 class="rv">Let’s build something</h2><p class="lead rv">Open to internships, open-source work, and projects with real users.</p>
+<div class="cts rv"><a class="btn p mag" href="mailto:jeswinjaison5@gmail.com">jeswinjaison5@gmail.com</a><a class="btn mag" href="tel:+917902727006">+91 79027 27006</a><a class="btn mag" href="https://www.linkedin.com/in/jeswinjaison-307q7" target="_blank" rel="noopener">LinkedIn</a><a class="btn mag" href="https://github.com/" target="_blank" rel="noopener">GitHub</a></div></section>
+<footer>Jeswin Jaison Vadakkel · Kottayam, India</footer>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+// name reveal
+$('#name').innerHTML='Jeswin Jaison Vadakkel'.split(' ').map((w,i)=>`<span class="w"><span style="animation-delay:${i*.14}s">${w}</span></span>`).join(' ');
+// typewriter
+const roles=['web platforms.','RAG and AI tools.','student startups.','open-source features.','full-stack web apps.'];let ri=0,ci=0,del=false;
+(function ty(){const t=roles[ri];ci+=del?-1:1;$('#ty').textContent=t.slice(0,ci);let d=del?35:70;if(!del&&ci===t.length){del=true;d=1400}else if(del&&ci===0){del=false;ri=(ri+1)%roles.length;d=300}setTimeout(ty,rm?9e9:d)})();
+// theme
+const root=document.documentElement;
+$('#theme').onclick=e=>{const b=e.currentTarget.getBoundingClientRect(),x=b.left+b.width/2,y=b.top+b.height/2,R=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y)),next=root.dataset.theme==='dark'?'light':'dark',apply=()=>{root.dataset.theme=next;$('#theme').setAttribute('aria-label','Switch to '+(next==='dark'?'light':'dark')+' theme')};
+if(rm){apply();return}
+if(document.startViewTransition){document.startViewTransition(apply).ready.then(()=>root.animate({clipPath:[`circle(0px at ${x}px ${y}px)`,`circle(${R}px at ${x}px ${y}px)`]},{duration:650,easing:'cubic-bezier(.35,.6,.25,1)',pseudoElement:'::view-transition-new(root)'}))}
+else{if(next==='light'){const s=document.createElement('div');s.className='sun-fx';s.style.cssText=`left:${x-R}px;top:${y-R}px;width:${R*2}px;height:${R*2}px`;document.body.appendChild(s);s.animate({transform:['scale(0)','scale(1)'],opacity:[1,1,0]},{duration:650,easing:'ease-out'}).onfinish=()=>s.remove()}setTimeout(apply,200)}};
+// data
+const jobs=[['Software Engineering Intern, Phorena','Aug 2026 to present',['Contributed to Code Atlas, a local-first WebUI and CLI tool for understanding codebases','Improved codebase analysis and developer productivity through practical tooling','Helped build features that generate engineering documentation from repository context']],
+['Freelance Web Developer, Nayana','Ongoing',['Hired by a doctor to build an e-commerce platform for skincare products','Building it from the ground up, with room to grow into a startup','Working directly with the client on product direction and features']],
+['Founder, Campus Deals','Ongoing',['Founded and validated a student marketplace for used products','Leading a team to build it into a full web platform']],
+['Learner, NxtWave CCBP 4.0','Ongoing',['Building strong DSA fundamentals','Preparing for Google Summer of Code']],
+['General Secretary, Heritage and Collectible Society','College club',['Run exhibitions and auctions for collectors','Helped launch a collectible exchange platform']]];
+$('#tl').insertAdjacentHTML('beforeend',jobs.map((j,i)=>`<div class="job rv${i<1?' open':''}" tabindex="0"><span class="t">+</span><h3>${j[0]}</h3><div class="m">${j[1]}</div><ul>${j[2].map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join(''));
+$$('.job').forEach(j=>{j.onclick=()=>j.classList.toggle('open');j.onkeydown=e=>{if(e.key==='Enter')j.click()}});
+const projs=[['AskCET','RAG college assistant with PDF ingestion, semantic search, source-aware answers, chat history, and admin-managed knowledge bases. Secure login, role-based access, and a production deployment.',['AI','Web'],'Personal'],
+['Code Atlas','Local-first WebUI and CLI for understanding codebases. I worked on documentation generation and AI Q&A grounded in repository evidence.',['AI','Open source'],'Open source'],
+['AETHER Headphones','Premium product showcase with scroll-driven 3D animation, glassmorphism, a custom cursor, and Firebase sign-in. Built with Next.js, React, Tailwind, and Framer Motion.',['Web'],'Personal'],
+['Nayana','E-commerce storefront and product listings for a dermatologist’s skincare range.',['Web','Client'],'In progress'],
+['Campus Deals','Student marketplace for buying and selling used products on campus. I founded it and lead the team.',['Web','Startup'],'Ongoing'],
+['MenuSync AI','Restaurant menu manager with a dashboard, CRUD, and multi-platform preview. Built with Supabase and Vercel.',['Web'],'Personal'],
+['Club Platform CET','Directory of CET clubs with events, execom, members, and contacts.',['Web','Campus'],'In progress']];
+const cats=['All',...new Set(projs.flatMap(p=>p[2]))];
+$('#chips').innerHTML=cats.map((c,i)=>`<button class="chip${i?'':' on'}">${c}</button>`).join('');
+$('#grid').innerHTML=projs.map(p=>`<article class="card rv" data-t="${p[2].join(',')}"><span class="st">${p[3]}</span><h3>${p[0]}</h3><p>${p[1]}</p><div class="tags">${p[2].map(t=>`<span>${t}</span>`).join('')}</div></article>`).join('');
+$$('.chip').forEach(b=>b.onclick=()=>{$$('.chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');$$('.card').forEach(c=>c.classList.toggle('hide',b.textContent!=='All'&&!c.dataset.t.split(',').includes(b.textContent)))});
+$('#mq').innerHTML=[...Array(2)].map(()=>['Java','Python','C','HTML','CSS','JavaScript','MySQL','Next.js','React','Supabase','Firebase','RAG','Git'].map(x=>`<span>${x}</span>`).join('')).join('');
+// card tilt
+$$('.card').forEach(c=>{c.onmousemove=e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');if(!rm)c.style.transform=`perspective(700px) rotateX(${(.5-y)*9}deg) rotateY(${(x-.5)*9}deg) translateY(-3px)`};c.onmouseleave=()=>c.style.transform=''});
+// magnetic buttons
+$$('.mag').forEach(b=>{b.onmousemove=e=>{if(rm)return;const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`};b.onmouseleave=()=>b.style.transform=''});
+// cursor
+const dot=$('#dot'),ring=$('#ring');let mx=0,my=0,rx=0,ry=0;
+addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.transform=`translate(${mx-3}px,${my-3}px)`;ring.classList.toggle('big',!!e.target.closest('a,button,.job,.card'))});
+(function f(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;ring.style.transform=`translate(${rx-18}px,${ry-18}px)`;requestAnimationFrame(f)})();
+// reveal + counters + bars
+function count(el){const to=+el.dataset.c,d=+el.dataset.d||0,s=el.dataset.s||'',t0=performance.now();(function s2(t){const k=Math.min(1,(t-t0)/1600),v=to*(1-Math.pow(1-k,3));el.textContent=v.toFixed(d)+s;if(k<1)requestAnimationFrame(s2)})(t0)}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('[data-c]').forEach(count);io.unobserve(e.target)}}),{threshold:.2});
+$$('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*.07+'s';io.observe(el)});
+// scroll: progress bar, timeline line, active nav
+const secs=$$('section[id]'),links=$$('.links a');
+function sc(){const h=document.documentElement,p=scrollY/(h.scrollHeight-innerHeight);$('#bar').style.width=p*100+'%';
+const tl=$('#tl'),r=tl.getBoundingClientRect();tl.style.setProperty('--p',Math.max(0,Math.min(1,(innerHeight*.6-r.top)/r.height)));
+let cur='';secs.forEach(s=>{if(s.getBoundingClientRect().top<innerHeight*.4)cur=s.id});links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur))}
+addEventListener('scroll',sc,{passive:true});sc();
+// hero canvas: interactive node map
+const cv=$('#cv'),g=cv.getContext('2d');let W,H,N=[];const lab=['Java','Python','C','Web','RAG','DSA','SQL','GSoC','React','Data','UI','Open source'];
+function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;N=[...Array(Math.min(70,Math.floor(W*H/16000)))].map((_,i)=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,l:i<lab.length?lab[i]:''}))}
+rs();addEventListener('resize',rs);let pm={x:-999,y:-999};
+cv.parentNode.addEventListener('mousemove',e=>{const r=cv.getBoundingClientRect();pm={x:e.clientX-r.left,y:e.clientY-r.top}});
+function col(n){return getComputedStyle(root).getPropertyValue(n).trim()}
+(function dr(){g.clearRect(0,0,W,H);const a=col('--acc'),o=col('--gold'),m=col('--mute');
+N.forEach(n=>{if(!rm){n.x+=n.vx;n.y+=n.vy}if(n.x<0||n.x>W)n.vx*=-1;if(n.y<0||n.y>H)n.vy*=-1;const dx=n.x-pm.x,dy=n.y-pm.y,d=Math.hypot(dx,dy);if(d<130&&d>0){n.x+=dx/d*1.6;n.y+=dy/d*1.6}});
+for(let i=0;i<N.length;i++)for(let j=i+1;j<N.length;j++){const d=Math.hypot(N[i].x-N[j].x,N[i].y-N[j].y);if(d<130){g.globalAlpha=(1-d/130)*.5;g.strokeStyle=a;g.beginPath();g.moveTo(N[i].x,N[i].y);g.lineTo(N[j].x,N[j].y);g.stroke()}}
+N.forEach(n=>{const near=Math.hypot(n.x-pm.x,n.y-pm.y)<110;g.globalAlpha=1;g.fillStyle=near?o:a;g.beginPath();g.arc(n.x,n.y,n.l?4:2.2,0,7);g.fill();if(n.l){g.globalAlpha=near?1:.65;g.fillStyle=near?o:m;g.font='500 14px system-ui';g.fillText(n.l,n.x+9,n.y+4)}});
+requestAnimationFrame(dr)})();
+// terminal
+const out=$('#out'),inp=$('#in');
+const cmd={help:'Commands: about, skills, projects, experience, education, contact, gsoc, clear',
+about:'Jeswin Jaison Vadakkel, CSE undergrad at CET Trivandrum (CGPA 9.23). Builds web platforms, AI tools, and student communities.',
+skills:'Java, Python, C, HTML/CSS/JS, MySQL, data analysis, RAG apps.',
+projects:'AskCET, Code Atlas, AETHER Headphones, Nayana, Campus Deals, MenuSync AI, Club Platform CET.',
+experience:'Intern at Phorena, freelance developer for Nayana, founder of Campus Deals, General Secretary of HCS.',
+education:'B.Tech CSE at CET (expected 2029), NxtWave CCBP 4.0, NPTEL Algorithms (Elite, IIT Madras).',
+contact:'jeswinjaison5@gmail.com | +91 79027 27006 | linkedin.com/in/jeswinjaison-307q7',
+gsoc:'Preparing for Google Summer of Code through steady open-source contributions, starting with Code Atlas.'};
+function pr(t){out.textContent+=t+'\n';out.scrollTop=out.scrollHeight}
+pr('Welcome. Type help to begin.');
+inp.addEventListener('keydown',e=>{if(e.key!=='Enter')return;const v=inp.value.trim().toLowerCase();inp.value='';pr('$ '+v);if(v==='clear'){out.textContent='';return}pr(cmd[v]||(v?'Unknown command. Type help.':''))});
+</script></body></html>
