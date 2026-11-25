@@ -14,6 +14,8 @@ CSE undergraduate at **College of Engineering, Trivandrum**, building structured
 
 ---
 
+📧 **PORTFOLIO**: [JESWIN JAISON VADAKKEL](https://portfolio-wheat-xi-id4au6gup4.vercel.app/)
+
 ### 🚀 What I'm working on
 
 - 🍽️ **MenuSync AI** — A full-stack SaaS-style restaurant menu manager (HTML, CSS, JS, Supabase, Vercel) with CRUD, multi-platform preview, auth, and real-time sync.
